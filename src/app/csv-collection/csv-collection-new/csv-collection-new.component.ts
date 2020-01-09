@@ -54,8 +54,8 @@ export class CsvCollectionNewComponent implements OnInit {
           console.log('Handling error locally and rethrowing it...', err);
           this.activeModal.close(err);
           const modalRef = this.modalService.open(ModalErrorComponent);
-          modalRef.componentInstance.title = 'Cannot upload csv collection.';
-          modalRef.componentInstance.message = err.error.message;
+          modalRef.componentInstance.title = 'Cannot upload CSV collection.';
+          modalRef.componentInstance.message = err.error;
           return throwError(err);
         })
       )
